@@ -10,7 +10,7 @@ const devMode = yargs.argv.mode !== 'production';
 
 const conf = {
   entry: {
-    // vendors: './src/vendors.js',
+    vendors: './src/vendors.js',
     main: './src/index.js',
   },
   output: {
@@ -70,7 +70,7 @@ const conf = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g)$/i,
         use: [
           {
             loader: 'file-loader',
