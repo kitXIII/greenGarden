@@ -10,13 +10,12 @@ const devMode = yargs.argv.mode !== 'production';
 
 const conf = {
   entry: {
-    vendors: './src/vendors.js',
+    // vendors: './src/vendors.js',
     main: './src/index.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'js/[name].js',
-    // publicPath: '../',
   },
   devServer: {
     overlay: true,
@@ -27,6 +26,10 @@ const conf = {
         test: /\.js$/,
         loader: 'babel-loader',
         // exclude: '/node_modules',
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
       },
       {
         test: /\.min\.css$/,
@@ -66,6 +69,37 @@ const conf = {
           },
         },
       },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: devMode ? {} : {
+              mozjpeg: {
+                progressive: true,
+                quality: 70,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -73,8 +107,8 @@ const conf = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: devMode ? './css/[name].css' : './css/[name].[hash].css',
-      chunkFilename: devMode ? './css/[id].css' : './css/[id].[hash].css',
+      filename: './css/[name].css',
+      chunkFilename: './css/[id].css',
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),

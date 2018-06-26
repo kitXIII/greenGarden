@@ -1,18 +1,21 @@
 @import variables
 
 .btn
-  display: inline-block
-  box-sizing: border-box
   width: 151px
   height: 44px
-  border: none
+  display: inline-block
+  box-sizing: border-box
   font-size: 1rem
+  font-family: 'Roboto Slab', serif
+  font-weight: 700
   line-height: 1.5rem
   text-align: center
-  cursor: pointer
   padding: 0.65rem 0.5rem
+  cursor: pointer
   text-decoration: none
-  font-family: RobotoSlabBold
+  border: none
+  &:focus
+    outline: none
   &-dark
     background-color: $color-khaki
     color: $color-white
@@ -20,7 +23,7 @@
       background-color: $color-oliva
     &:active
       background-color: $color-olivadark
-      outline: 2px solid $color-neutral2
+      outline: 2px solid $color-leaf
   &-light
     background-color: $color-white
     color: $color-khaki
@@ -28,4 +31,4 @@
       background-color: $color-neutral1
     &:active
       background-color: $color-neutral2
-      outline: 2px solid $color-grey3
+      outline: 2px solid $color-leaf
