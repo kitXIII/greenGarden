@@ -77,6 +77,7 @@ const conf = {
             options: {
               name: '[name].[ext]',
               outputPath: 'images/',
+              publicPath: '../images/'
             },
           },
           {
@@ -90,8 +91,8 @@ const conf = {
                 enabled: false,
               },
               pngquant: {
-                quality: '65-90',
-                speed: 4,
+                quality: '70-90',
+                speed: 3,
               },
               gifsicle: {
                 interlaced: false,
