@@ -44,10 +44,10 @@
               <a href='#'>Home</a>
             </li>
             <li class="headerMenu__item">
-              <a href='#'>About us</a>
+              <a href='#about'>About us</a>
             </li>
             <li class="headerMenu__item">
-              <a href='#'>Services</a>
+              <a href='#services'>Services</a>
             </li>
             <li class="headerMenu__item">
               <a href='#'>Our staff</a>
@@ -78,7 +78,7 @@
       </nav>
     </div>
     <div class='headerSlider'>
-      <div class='headerSlider__item  headerSlider__item-active'>
+      <div class='headerSlider__item'>
         <img src='./images/bg0.jpg' alt='background' class='headerSlider__image'>
         <h1 class='headerSlider__header'>We love to care your garden</h1>
         <p class='headerSlider__text'>Dedicated and Best Gardening Guys at Your Door Step!</p>
@@ -88,7 +88,7 @@
         <h2 class='headerSlider__header'>We realy lake do it</h2>
         <p class='headerSlider__text'>Dedicated and Best Gardening Guys at Your Door Step!</p>
       </div>
-      <div class='headerSlider__item'>
+      <div class='headerSlider__item headerSlider__item-active'>
         <img src='./images/bg2.jpg' alt='background' class='headerSlider__image'>
         <h2 class='headerSlider__header'>Best garden service for you</h2>
         <p class='headerSlider__text'>Dedicated and Best Gardening Guys at Your Door Step!</p>
@@ -105,7 +105,7 @@
         <figure class='card'>
           <div class='card__img'></div>
           <figcaption class='card__caption'>
-            <h4 class='card__header'>Water Gardening</h4>
+            <h4 class='card__header card__header-upper'>Water Gardening</h4>
             <p class='card__text card__text-fixedHeight155'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
               perferendis esse asperiores unde atque architecto rem, magnam eos optio quidem, soluta facere! </p>
             <a href='#' class='card__ref'>Read more
@@ -118,7 +118,7 @@
         <figure class='card'>
           <div class='card__img'></div>
           <figcaption class='card__caption'>
-            <h4 class='card__header'>Kitchen Gardening</h4>
+            <h4 class='card__header card__header-upper'>Kitchen Gardening</h4>
             <p class='card__text card__text-fixedHeight155'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
               perferendis esse asperiores unde atque architecto rem, magnam eos optio quidem, soluta facere! </p>
             <a href='#' class='card__ref'>Read more
@@ -131,7 +131,7 @@
         <figure class='card'>
           <div class='card__img'></div>
           <figcaption class='card__caption'>
-            <h4 class='card__header'>Commercial Gardening</h4>
+            <h4 class='card__header card__header-upper'>Commercial Gardening</h4>
             <p class='card__text card__text-fixedHeight155'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas molestiae suscipit illum ab fuga libero repellat
               voluptatibus beatae! Autem praesentium sed debitis culpa explicabo quod placeat eligendi quia animi cum impedit
               adipisci excepturi delectus recusandae eveniet, consequuntur nam eos possimus, similique obcaecati in ex quos!
@@ -144,7 +144,7 @@
       </div>
       <div class='infoBoxes__item'>
         <div class='contactForm'>
-          <h4 class='contactForm__header'>Appointment</h4>
+          <h4 class='contactForm__header card__header-upper'>Appointment</h4>
           <p class='contactForm__text'>We are available to discuss your garden today!</p>
           <form action='' class='contactForm__form'>
             <input type='text' name="name" class='contactForm__input' placeholder="Enter your full name ...">
@@ -156,7 +156,6 @@
         </div>
       </div>
     </div>
-
   </section>
   <section id='about' class='container'>
     <div class='sectionAbout'>
@@ -164,9 +163,13 @@
         <img src='./images/AboutImage.png' alt='about image' class='sectionAbout__image'>
       </div>
       <div class='sectionAbout__txtSlide'>
-        <h3 class='sectionAbout__header textHeader textHeader-left textHeader-upper'><span>About&nbsp;our</span> <span class='textHeader-green'>Green&nbsp;Garden</span>
+        <h3 class='sectionAbout__header textHeader textHeader-left textHeader-upper'>
+          <span>About&nbsp;our</span>
+          <span class='textHeader-green'>Green&nbsp;Garden</span>
         </h3>
-        <p class='sectionAbout__text textParagraph textParagraph-left'>We are very happy to announce that we are the best gardening Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nostrum totam impedit deserunt dignissimos porro dicta officia, quas, officiis laboriosam eum rerum nobis placeat inventore assumenda! Quos qui doloribus tempora incidunt error hic dolorum assumenda nesciunt.</p>
+        <p class='sectionAbout__text textParagraph textParagraph-left'>We are very happy to announce that we are the best gardening Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Doloremque nostrum totam impedit deserunt dignissimos porro dicta officia, quas, officiis laboriosam eum
+          rerum nobis placeat inventore assumenda! Quos qui doloribus tempora incidunt error hic dolorum assumenda nesciunt.</p>
         <div class='aboutBoxes'>
           <div class='aboutBoxes__innerBox'>
             <div class='aboutBoxes__item'>
@@ -194,6 +197,121 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <aside class='callUsLayout'>
+    <div class='container'>
+      <div class='callUs'>
+        <div class='callUs__hey'>
+          <span class='callUs__heyIcon far fa-heart'></span>
+          <h2 class='callUs__heyHeader textHeader textHeader-white textHeader-left'>Hey! We are top rated
+            <span class='textHeader-green textHeader-upper'>Gardeners</span>
+          </h2>
+          <p class='callUs__heyText'>They say we do our best to serve our customer’s gardens because gardening</p>
+        </div>
+        <div class='callUs__phoneBox'>
+          <p class='callUs__phoneCaption'>call us</p>
+          <p class='callUs__phoneNumber'>123-123-1234</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <section id='services' class='container'>
+    <div class='sectionServices'>
+      <div class='headerOfSections'>
+        <h2 class='headerOfSections__header textHeader textHeader-upper textHeader-center'>Our gardening
+          <span class='textHeader-green'>Services</span>
+        </h2>
+        <span class='headerOfSections__logo'></span>
+        <p class='headerOfSections__text textParagraph textParagraph-center'>We are very please to announce our garden html template include lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Similique quibusdam unde voluptates omnis vel.</p>
+      </div>
+      <ul class='sectionServices__services'>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card  card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service1.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Pruning &amp; Trimming Plants</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service2.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Planting and Removal</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service3.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Lawn &amp; Garden Care</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service4.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Irrigation &amp; Drainage</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service5.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Design &amp; Planting</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class='sectionServices__serviceItem'>
+          <figure class='card card-deco'>
+            <div class='card__img'>
+              <a href='#' class='card__hidden card__hidden-centerOfParent btn btn-dark'>Know More</a>
+              <img src='./images/service6.jpeg' alt='service image' class='card__image'>
+            </div>
+            <figcaption class='card__caption'>
+              <h4 class='card__header card__header-leftText'>Snow &amp; Ice Removal</h4>
+              <p class='card__text card__text-leftText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima debitis inventore. Nemo, odio distinctio
+                perferendis!
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
     </div>
   </section>
 </body>
