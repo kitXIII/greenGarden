@@ -1,0 +1,60 @@
+@import variables
+
+.contactForm
+  background-color: $color-grey4
+  height: 445px
+  padding: 40px 24px 30px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    flex-grow: 1
+    box-shadow: border-box
+    &>.btn
+      align-self: center  
+  
+  &__input
+    border: 1px solid $color-olivadark
+    border-radius: 5px
+    background-color: rgba(70, 88, 21, 0.7)
+    height: 40px
+    width: auto
+    box-sizing: border-box
+    padding-left: 10px
+    font-family: 'Roboto Slab', serif
+    color: $color-milk
+    font-size: 0.875rem
+    font-weight: 400
+    text-align: left
+    outline: none
+    overflow: hidden
+    margin-bottom: 1rem
+    &:focus
+      border-color: $color-milk
+    &:-webkit-autofill
+      color: $color-milk
+      background-color: rgba(70, 88, 21, 1)
+      -webkit-text-fill-color: $color-milk !important
+      -webkit-box-shadow:inset 0 0 0 30px $color-oliva !important
+    &::placeholder
+      color: $color-milk
+  &__header
+    font-family: 'Roboto', sans-serif
+    color:  $color-lime
+    font-size: 1.625rem
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    padding-bottom: 0.625rem
+  &__text
+    font-family: 'Roboto Slab', serif
+    color:  $color-white
+    font-size: 1rem
+    font-weight: 400
+    line-height: 1.375
+    text-align: center
+    padding-bottom: 1rem

@@ -1,0 +1,55 @@
+@import variables
+
+.card
+  background-color: $color-neutral2
+
+  &__img
+    height: 215px
+
+  &__caption
+    background-color: $color-lightgrey
+    padding-top: 1.25rem
+    padding-bottom: 0.75rem
+
+  &__header
+    font-family: 'Roboto', sans-serif
+    color:  $color-dark
+    font-size: 1.25em
+    line-height: 1.25rem
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    padding-bottom: 0.5rem
+     
+  &__text
+    font: $font-p-std
+    color:  $color-grey1
+    text-align: center
+    padding: 0 1rem 0.5rem
+    box-sizing: border-box
+    &-fixedHeight155
+      margin-bottom: -0.7rem
+      height: 155px
+      overflow: hidden
+      & + .card__ref
+        padding-top: 0.7rem
+        position: relative
+        z-index: 10
+        background-color: $color-lightgrey
+  
+  &__ref
+    font-family: 'Roboto', sans-serif
+    color:  $color-dark
+    font-size: 1rem
+    line-height: 1rem
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+    display: block
+    &:hover
+      // text-decoration: underline
+      color: $color-oliva
+    &>span
+      font-size: 1.25rem
+
+      

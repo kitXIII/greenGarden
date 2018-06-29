@@ -1,0 +1,41 @@
+@import variables
+
+.aboutBoxes
+
+  &__innerBox
+    display: flex
+    flex-wrap: wrap    
+    margin-left: -15px
+    margin-right: -15px
+    &:last-child
+      margin-bottom: -1rem
+
+  &__item
+    padding-left: 56px
+    margin: 0 15px
+    flex-basis: calc(50% - 30px)
+    box-sizing: border-box
+    padding-bottom: 1rem
+    flex-grow: 1
+    position: relative
+  
+  &__itemIcon
+      position: absolute
+      top: 2px
+      left: 0
+      color: $color-leaf
+      font-size: 2.5rem
+  
+      &.fa-pagelines
+        font-size: 3.25rem
+  
+  &__header
+    font: $font-h-std
+    color: $color-dark
+    text-transform: uppercase
+    padding-bottom: 0.5rem
+    white-space: nowrap
+  
+  &__text
+    font: $font-p-std
+    color: $color-grey1
