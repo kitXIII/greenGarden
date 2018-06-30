@@ -70,16 +70,17 @@ const conf = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g)$/i,
+        test: /\.(gif|png|jpeg)$/i, // use jpeg instead of jpg because extension is used in mimetype
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-              publicPath: '../images/'
-            },
-          },
+          'url-loader?limit=10000&mimetype=image/[ext]&name=./images/[name].[ext]',
+          // {
+          //    loader: 'file-loader',
+          //    options: {
+          //      name: '[name].[ext]',
+          //      outputPath: 'images/',
+          //      publicPath: '../images/',
+          //     },
+          // },
           {
             loader: 'image-webpack-loader',
             options: devMode ? {} : {
@@ -92,7 +93,7 @@ const conf = {
               },
               pngquant: {
                 quality: '70-90',
-                speed: 3,
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
