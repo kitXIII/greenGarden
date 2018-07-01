@@ -49,5 +49,9 @@
     "Safari >= 9",
     "Android >= 4.4",
     "Opera >= 30"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10"
+  }
 }

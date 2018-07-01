@@ -10,6 +10,8 @@
     position: relative
     z-index: 5
     overflow: hidden
+    &-tall
+      height: 270px
   
   &__image
     position: absolute
@@ -20,7 +22,9 @@
   &__caption
     background-color: $color-lightgrey
     padding: 1.25rem 0.75rem 0.75rem
-
+    &-tall
+      padding: 1.375rem 0.75rem 1.25rem
+  
   &__header
     font-family: 'Roboto', sans-serif
     color:  $color-dark
@@ -29,6 +33,8 @@
     font-weight: 700
     text-align: center
     padding-bottom: 0.675rem
+    &-centerText
+      text-align: center
     &-leftText
       text-align: left
     &-upper
@@ -37,7 +43,6 @@
   &__text
     font: $font-p-std
     color:  $color-grey1
-    text-align: center
     box-sizing: border-box
     &-fixedHeight155
       margin-bottom: -0.7rem
@@ -50,6 +55,8 @@
         background-color: $color-lightgrey
     &-leftText
       text-align: left
+    &-centerText
+      text-align: center
 
   &__ref
     font-family: 'Roboto', sans-serif
@@ -73,6 +80,14 @@
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
+
+  &__faElement
+    font-size: 2.5rem
+    color: $color-white
+    &:not(:last-child)
+      margin-right: 1rem
+    &:hover
+      color: $color-oliva
 
   &-deco
     & .card__img::before // as image filter, because IE

@@ -1,0 +1,46 @@
+@import variables
+
+.carusel
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__frame
+    overflow: hidden   
+
+  &__list
+    display: flex
+    margin-left: -14px
+    
+  &__item
+    padding-left: 14px
+
+  &__control
+    flex-shrink: 0
+    border-radius: 50%
+    width: 35px
+    height: 35px
+    border: 1px solid $color-white
+    box-sizing: border-box
+    &:hover
+      background: $color-khaki
+
+    &::after
+      content: ''
+      display: block
+      width: 14px
+      height: 14px
+      border-bottom: 1px solid $color-white
+      border-left: 1px solid $color-white
+      transform-origin: 50% 50%
+      z-index: -1
+   
+    &-left
+      margin-right: 13px
+      &::after
+        transform: translate(14px, 10px) rotate(45deg)
+
+    &-right
+      margin-left: 13px
+      &::after
+        transform: translate(7px, 10px) rotate(225deg)

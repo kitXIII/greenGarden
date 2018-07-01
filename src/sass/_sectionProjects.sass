@@ -1,0 +1,29 @@
+@import variables
+
+$item-width: 257px
+$items-gap: 14px
+$carusel-gap: 100px
+
+@function getCaruselWidth($n)
+  @return ($item-width * $n) + ($items-gap * ($n - 1))
+
+@function getBgWidth($n)
+  @return getCaruselWidth($n) + $carusel-gap
+
+.sectionProjects
+  padding: 80px 0 80px
+
+  &__contentFrame
+    width: getCaruselWidth(4)
+    @media screen and (max-width: getBgWidth(4))
+      width: getCaruselWidth(3) 
+
+    @media screen and (max-width: getBgWidth(3))
+      width: getCaruselWidth(2) 
+  
+    @media screen and (max-width: getBgWidth(2))
+      width: getCaruselWidth(1) 
+   
+  &__element
+    width: $item-width
+
