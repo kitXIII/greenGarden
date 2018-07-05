@@ -1,17 +1,31 @@
 @import variables
 
-.card
-  background-color: $color-neutral2
+.card  
   box-sizing: border-box
   position: relative
 
   &__img
+    background-color: $color-neutral2
     height: 215px
     position: relative
     z-index: 5
     overflow: hidden
     &-tall
       height: 270px
+    &-round
+      width: auto
+      background-color: transparent
+      height: auto
+      border-radius: 50%
+      margin-bottom: 2rem
+      border: 0.5rem solid $color-lightgrey
+      box-sizing: border-box
+      &::after
+        content: ""
+        display: block
+        padding-top: 100%
+      & .card__image
+        width: 100%
   
   &__image
     position: absolute
@@ -24,6 +38,24 @@
     padding: 1.25rem 0.75rem 0.75rem
     &-tall
       padding: 1.375rem 0.75rem 1.25rem
+    &-tall2
+      padding: 1.25rem 0.75rem 1rem
+    &-low
+      padding: 1rem 0.75rem 1rem
+    &-widthTriangle
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        top: -1.25rem
+        left: 50%
+        transform: translateX(-50%)
+        border: 1.25rem solid $color-lightgrey
+        border-top-width: 0
+        border-left-color: transparent
+        border-right-color: transparent
+        color: red
   
   &__header
     font-family: 'Roboto', sans-serif
@@ -39,6 +71,12 @@
       text-align: left
     &-upper
       text-transform: uppercase
+    &-variant1
+      font: $font-h-sml
+      padding-bottom: 0.25rem
+    &-variant2
+      font: $font-h-std
+      padding-bottom: 0rem
      
   &__text
     font: $font-p-std
@@ -57,6 +95,12 @@
       text-align: left
     &-centerText
       text-align: center
+    &-italic
+      font-style: italic
+    &-bigger
+      color: $color-plum
+      font-size: 1rem
+      line-height: 1.5
 
   &__ref
     font-family: 'Roboto', sans-serif
@@ -76,10 +120,14 @@
     display: none
     position: absolute
     z-index: 20
-    &-centerOfParent
+    &-centerOfParent  
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
+    &-centerDownOfParent  
+      top:  10.125rem
+      left: 50%
+      transform: translateX(-50%)
 
   &__faElement
     font-size: 2.5rem
@@ -91,19 +139,21 @@
 
   &-deco
     & .card__img::before // as image filter, because IE
-        content: ''
-        position: absolute
-        width: 100%
-        height: 100%
-        background-color: $color-filter1
-        z-index: 10
-        display: none
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $color-filter1
+      z-index: 10
+      display: none
 
   &-deco:hover
     & .card__img::before
       display: block
     & .card__caption    
       background-color: $color-leaf
+      &-widthTriangle::before
+        border-bottom-color: $color-leaf
     & .card__header
       color: $color-white
     & .card__text
@@ -112,3 +162,18 @@
       display: block
     & .card__image
       transform: scale(1.1)
+    & .card__img-round
+      border: 1rem solid $color-khaki
+  
+  &-decoPerson:hover
+    & .card__image
+      transform: none
+  
+  &__social
+    // list-style: none
+    color: $color-dark
+    font-size: 1.25rem
+    &:hover
+      color: $color-white
+      & a
+        opacity: 1
