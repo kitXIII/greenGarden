@@ -72,7 +72,7 @@ const conf = {
       {
         test: /\.(gif|png|jpeg)$/i, // use jpeg instead of jpg because extension is used in mimetype
         use: [
-          'url-loader?limit=10000&mimetype=image/[ext]&name=./images/[name].[ext]',
+          'url-loader?limit=8192&mimetype=image/[ext]&name=./images/[name].[ext]',
           // {
           //    loader: 'file-loader',
           //    options: {

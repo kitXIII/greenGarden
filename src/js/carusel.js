@@ -46,8 +46,8 @@ const carusel = () => {
       default:
     }
   };
-
-  document.querySelectorAll(`.${controlClass}`).forEach(el => el.addEventListener('click', caruselHandler));
+  Array.prototype.forEach
+    .call(document.querySelectorAll(`.${controlClass}`), el => el.addEventListener('click', caruselHandler));
 };
 
 export default carusel;

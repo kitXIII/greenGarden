@@ -1,5 +1,5 @@
 /* eslint-disable */
-import '../node_modules/jquery/dist/jquery.min';
+// import '../node_modules/jquery/dist/jquery.min';
 
 import './sass/fontawesome/fontawesome';
 import './sass/fontawesome/fa-solid';
