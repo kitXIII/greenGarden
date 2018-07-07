@@ -1,0 +1,113 @@
+@import variables
+
+.personCard  
+  // box-sizing: border-box
+  // position: relative
+
+  &__imageBox
+    height: auto
+    // width: 100%
+    border-radius: 50%
+    background-color: transparent
+    position: relative
+    z-index: 5
+    overflow: hidden
+    margin-bottom: 2rem
+    border: 0.5rem solid $color-lightgrey
+    box-sizing: border-box
+    &::after
+      content: ""
+      display: block
+      padding-top: 100%
+      box-sizing: border-box
+    &::before // as image filter, because IE
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $color-filter1
+      z-index: 10
+      display: none
+  
+  &__image
+    width: 100%
+    position: absolute
+    bottom: 0
+    right: 0
+  
+  &__caption
+    background-color: $color-lightgrey
+    padding: 1rem 0.75rem 1rem
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: -1.25rem
+      left: 50%
+      transform: translateX(-50%)
+      border: 1.25rem solid $color-lightgrey
+      border-top-width: 0
+      border-left-color: transparent
+      border-right-color: transparent
+  
+  &__header
+    font-family: 'Roboto', sans-serif
+    color:  $color-dark
+    font-size: 1.25em
+    line-height: 1.25rem
+    font-weight: 700
+    text-align: center
+    padding-bottom: 0.675rem
+    text-align: center
+    font: $font-h-std
+    padding-bottom: 0rem
+     
+  &__text
+    font: $font-p-std
+    color:  $color-grey1
+    box-sizing: border-box
+    text-align: center
+    font-style: italic
+    color: $color-plum
+    font-size: 1rem
+    line-height: 1.5
+
+  &__hidden
+    display: none
+    position: absolute
+    z-index: 20
+    &-centerOfParent  
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &-centerDownOfParent  
+      top:  10.125rem
+      left: 50%
+      transform: translateX(-50%)
+
+  &__social
+    color: $color-dark
+    font-size: 1.25rem
+    &:hover
+      color: $color-white
+      & a
+        opacity: 1
+  
+  &:hover
+    & .personCard__imageBox
+      border: 1rem solid $color-khaki
+      &::before
+        display: block
+    & .personCard__caption
+      background-color: $color-leaf
+    & .personCard__caption::before     
+      border-bottom-color: $color-leaf
+             
+    & .personCard__header
+      color: $color-white
+    & .personCard__text
+      color: $color-white
+    & .personCard__hidden
+      display: block
+  

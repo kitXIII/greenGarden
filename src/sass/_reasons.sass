@@ -1,0 +1,67 @@
+@import variables
+@import ./fontawesome/fontawesome
+@import ./fontawesome/fa-solid
+
+.reasons
+  display: flex
+  flex-direction: column
+
+  &__item
+    &:not(:last-child)
+      padding-bottom: 0.625rem
+
+    &-active
+      & .reasons__details
+        display: block
+      & .reasons__summary
+        background-color: $color-leaf
+        color: $color-white
+      & .reasons__btn
+        &:before
+          content: " - "
+          color: $color-white
+          top: 35%
+
+  &__summary
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.7rem 1rem
+    background-color: $color-neutral1
+    border-radius: 7px
+    font: $font-p-v2
+    color: $color-dark
+    position: relative
+    z-index: 5
+
+  &__details
+    border-bottom-left-radius: 7px
+    border-bottom-right-radius: 7px
+    border: 1px solid $color-neutral1
+    background-color: $color-white
+    padding: 2.8rem 1rem 0.8rem
+    margin-top: -2rem
+    font: $font-p-std
+    color: $color-grey1
+    display: none
+
+  &__btn
+    flex-shrink: 0
+    display: block
+    width: 1.5rem
+    height: 1.5rem
+    cursor: pointer
+    position: relative
+    &:before
+      position: absolute
+      top: 45%
+      left: 50%
+      transform: translate(-50%, -50%)
+      content: "+"
+      color: $color-dark
+      font-family: 'Open Sans', sans-serif
+      font-size: 1.75rem
+      font-weight: 600
+      
+
+  
