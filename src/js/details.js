@@ -17,11 +17,11 @@ const details = () => {
 
     const $currentItem = $this.closest(`.${itemClass}`).eq(0);
     const $collection = $this.closest(`.${rootClass}`).find(`.${itemClass}`);
-    const itemActivation = !$currentItem.hasClass(activeClass);
+    const isActivation = !$currentItem.hasClass(activeClass);
 
     $collection.removeClass(activeClass);
 
-    if (itemActivation) {
+    if (isActivation) {
       $currentItem.addClass(activeClass);
     }
   };
