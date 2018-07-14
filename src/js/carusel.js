@@ -7,6 +7,8 @@ const carusel = () => {
   const controlClass = 'carusel__control';
   const controlClassLeft = 'carusel__control-left';
   const controlClassRight = 'carusel__control-right';
+  const itemWidth = '257px';
+  const itemPaddingLeft = '14px';
 
   const getSetHandler = (elem, handler) => () => elem.addEventListener('click', handler);
 
@@ -29,19 +31,19 @@ const carusel = () => {
     switch (direction) {
       case 'right':
         $elem = $list.find(`.${itemClass}`).eq(0);
-        $elem.animate({ marginLeft: '-257px', paddingLeft: '0px' });
+        $elem.animate({ marginLeft: `-${itemWidth}`, paddingLeft: '0px' });
         setTimeout(() => {
           $elem.detach();
           $elem.appendTo($list);
-          $elem.animate({ marginLeft: '0px', paddingLeft: '14px' });
+          $elem.animate({ marginLeft: '0px', paddingLeft: `${itemPaddingLeft}` });
         }, 500);
         break;
       case 'left':
         $elem = $list.find(`.${itemClass}:last-child`).eq(0);
-        $elem.css({ marginLeft: '-257px', paddingLeft: '0px' });
+        $elem.css({ marginLeft:  `-${itemWidth}`, paddingLeft: '0px' });
         $elem.detach();
         $elem.prependTo($list);
-        $elem.animate({ marginLeft: '0px', paddingLeft: '14px' });
+        $elem.animate({ marginLeft: '0px', paddingLeft: `${itemPaddingLeft}` });
         break;
       default:
     }
