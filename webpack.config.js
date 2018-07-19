@@ -1,15 +1,17 @@
 const path = require('path');
+const yargs = require('yargs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const Autoprefixer = require('autoprefixer');
 const MqPacker = require('css-mqpacker');
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = yargs.argv.mode !== 'production';
 
 const conf = {
   entry: {
     main: './src/index.js',
+    styles: './src/sass/style.sass',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -68,7 +70,7 @@ const conf = {
         },
       },
       {
-        test: /\.(gif|png|jpeg)$/i, // use jpeg instead of jpg, because extension used in mimetype
+        test: /\.(gif|png|jpeg)$/i, // use jpeg instead of jpg because extension is used in mimetype
         use: [
           'url-loader?limit=8192&mimetype=image/[ext]&name=./images/[name].[ext]',
           // {

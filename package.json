@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "eslint": "eslint",
-    "build": "cross-env webpack --mode=production",
-    "dev": "cross-env webpack-dev-server --mode=development --open"
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --mode=development --open"
   },
   "author": "Nikita Konovalov",
   "license": "ISC",
@@ -18,7 +18,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
-    "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "css-mqpacker": "^6.0.2",
     "eslint": "^4.19.1",
@@ -38,7 +37,8 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "yargs": "^12.0.1"
   },
   "browserslist": [
     "Chrome >= 45",
@@ -51,7 +51,6 @@
     "Opera >= 30"
   ],
   "dependencies": {
-    "jquery": "^3.3.1",
-    "lodash": "^4.17.10"
+    "jquery": "^3.3.1"
   }
 }
