@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { findIndex } from 'lodash';
+// import { findIndex } from 'lodash';
 
 const slider = () => {
   const rootClass = 'headerSlider';
@@ -11,7 +11,13 @@ const slider = () => {
     $(`.${rootClass}`).each(function () {
       const $collection = $(this).find(`.${itemClass}`);
       const size = $collection.length;
-      const currentIndex = findIndex($collection, elem => elem.classList.contains(activeClass));
+      // const currentIndex = findIndex($collection, elem => elem.classList.contains(activeClass));
+      const currentIndex = Array.prototype.reduce.call($collection, (acc, elem, index) => {
+        if (elem.classList.contains(activeClass)) {
+          return index;
+        }
+        return acc;
+      }, -1);
       const nextIndex = (currentIndex + 1) % size;
 
       $($collection[currentIndex]).removeClass(activeClass);
