@@ -121,7 +121,4 @@ const conf = {
   devtool: devMode && 'eval-sourcemap',
 };
 
-module.exports = () => {
-  console.log('------------------------->', devMode);
-  return conf;
-};
+module.exports = conf;
