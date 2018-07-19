@@ -9,7 +9,6 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const conf = {
   entry: {
-    vendors: './src/vendors.js',
     main: './src/index.js',
   },
   output: {
@@ -120,4 +119,7 @@ const conf = {
   devtool: devMode && 'eval-sourcemap',
 };
 
-module.exports = conf;
+module.exports = () => {
+  console.log('------------------------->', devMode);
+  return conf;
+};
